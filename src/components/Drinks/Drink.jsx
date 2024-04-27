@@ -10,7 +10,7 @@ export const Drink = ({ name, image }) => {
         </div>
         <div className="drink__info">
           <h3>{name}</h3>
-          <Layer color="#613916" label="mléčná pěna" />   
+          <Layer color="#613916" label="mléčná pěna" />
         </div>
       </div>
 

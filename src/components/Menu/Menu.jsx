@@ -1,7 +1,7 @@
 import { Drink } from '../Drinks/Drink';
 import './Menu.css';
 
-export const Menu = (props) => {
+export const Menu = ({ drinks }) => {
   return (
     <section className="menu">
       <div className="container">
@@ -9,11 +9,12 @@ export const Menu = (props) => {
         <p className="menu-intro">
           Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
         </p>
-        <Drink
-          name="Romano"
-          image="http://localhost:4000/assets/cups/romano.png"
-        />
-        
+        <div className="drinks-list">
+          <Drink
+            name={drinks.data.name}
+            image="http://localhost:4000/assets/cups/romano.png"
+          />
+        </div>
         <div className="order-detail">
           <a href="/order.html">Detail objednávky</a>
         </div>
