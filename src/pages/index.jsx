@@ -9,7 +9,6 @@ import { Banner } from '../components/Banner/Banner';
 import { Menu } from '../components/Menu/Menu';
 
 const response = await fetch('http://localhost:4000/api/drinks');
-
 const drinksList = await response.json();
 
 document.querySelector('#root').innerHTML = render(
@@ -17,7 +16,7 @@ document.querySelector('#root').innerHTML = render(
     <Header />
     <main>
       <Banner />
-      <Menu drinks={drinksList} />
+      <Menu drinks={drinksList.data} />
       <Gallery />
       <Contact />
     </main>

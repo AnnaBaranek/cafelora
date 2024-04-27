@@ -1,7 +1,7 @@
 import { Layer } from '../Layer/Layer';
 import './Drink.css';
 
-export const Drink = ({ name, image }) => {
+export const Drink = ({id, name, ordered, layers, image }) => {
   return (
     <div className="drink">
       <div className="drink__product">
