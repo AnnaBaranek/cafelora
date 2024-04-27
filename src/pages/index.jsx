@@ -38,7 +38,7 @@ forms.forEach((form) => {
       body: JSON.stringify([{ op: 'replace', path: '/ordered', value: true }]),
     });
 
-    console.log();
+    window.location.reload();
   });
 });
 
