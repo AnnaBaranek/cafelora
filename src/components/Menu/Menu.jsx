@@ -2,7 +2,7 @@ import './Menu.css';
 
 export const Menu = (props) => {
   return (
-    <section className="menu" id="menu">
+    <section className="menu">
       <div className="container">
         <h2>Naše nabídka</h2>
         <p className="menu-intro">
