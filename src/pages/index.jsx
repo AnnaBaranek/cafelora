@@ -24,11 +24,26 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
+const forms = document.querySelectorAll('.drink__controls')
+forms.forEach((form) => {
+ form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(e.target.dataset.id);
+ })
+})
+
+
+
+
+
+
+//navigation
 const navBtn = document.querySelector('.nav-btn');
 const rollOutElm = document.querySelector('.rollout-nav');
-
 const menuOpen = () => {
   rollOutElm.classList.toggle('nav-closed');
 };
-
 navBtn.addEventListener('click', menuOpen);
+
+
+
