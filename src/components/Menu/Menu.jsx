@@ -15,7 +15,7 @@ export const Menu = ({ drinks }) => {
               id={item.id}
               name={item.name}
               image={`http://localhost:4000${item.image}`}
-              ordered={true}
+              ordered={item.ordered}
               layers={item.layers}
             />
           ))}
