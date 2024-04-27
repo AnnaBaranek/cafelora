@@ -13,7 +13,7 @@ export const Menu = (props) => {
           name="Romano"
           image="http://localhost:4000/assets/cups/romano.png"
         />
-        ;
+        
         <div className="order-detail">
           <a href="/order.html">Detail objednávky</a>
         </div>
