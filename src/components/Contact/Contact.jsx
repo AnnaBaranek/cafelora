@@ -1,3 +1,5 @@
+import "./Contact.css";
+
 export const Contact = (props) => {
     return (
         <section>
