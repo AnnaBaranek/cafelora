@@ -1,8 +1,7 @@
-import { Drink } from "../Drinks/Drink";
-import "./Menu.css";
+import { Drink } from '../Drinks/Drink';
+import './Menu.css';
 
 export const Menu = ({ drinks }) => {
-
   return (
     <section className="menu">
       <div className="container">
@@ -17,16 +16,7 @@ export const Menu = ({ drinks }) => {
               name={item.name}
               image={`http://localhost:4000${item.image}`}
               ordered={true}
-              layers={[
-                {
-                  color: '#fbdf5b',
-                  label: 'citrón',
-                },
-                {
-                  color: '#613916',
-                  label: 'espresso',
-                },
-              ]}
+              layers={item.layers}
             />
           ))}
         </div>
