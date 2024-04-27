@@ -1,3 +1,5 @@
+import './Menu.css';
+
 export const Menu = (props) => {
   return (
     <section className="menu">
