@@ -24,18 +24,23 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
-const forms = document.querySelectorAll('.drink__controls')
+const forms = document.querySelectorAll('.drink__controls');
 forms.forEach((form) => {
- form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log(e.target.dataset.id);
- })
-})
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    console.log(e.target.dataset.id);
 
+    await fetch(`http://localhost:4000/api/drinks/${e.target.dataset.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([{ op: 'replace', path: '/ordered', value: true }]),
+    });
 
-
-
-
+    console.log();
+  });
+});
 
 //navigation
 const navBtn = document.querySelector('.nav-btn');
@@ -44,6 +49,3 @@ const menuOpen = () => {
   rollOutElm.classList.toggle('nav-closed');
 };
 navBtn.addEventListener('click', menuOpen);
-
-
-
